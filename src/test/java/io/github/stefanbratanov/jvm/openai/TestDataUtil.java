@@ -50,6 +50,7 @@ import io.github.stefanbratanov.jvm.openai.ToolCall.FileSearchToolCall.FileSearc
 import io.github.stefanbratanov.jvm.openai.ToolCall.FileSearchToolCall.FileSearch.Result.Content;
 import io.github.stefanbratanov.jvm.openai.ToolCall.FunctionToolCall;
 import io.github.stefanbratanov.jvm.openai.ToolResources.FileSearch.VectorStore;
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.function.IntFunction;
 import java.util.function.Supplier;
@@ -62,7 +63,7 @@ public class TestDataUtil {
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   private static final double EPSILON = 0.000001;
 
-  private final Random random = new Random();
+  private final Random random = new SecureRandom();
 
   public CreateChatCompletionRequest randomCreateChatCompletionRequest() {
     CreateChatCompletionRequest.Builder builder =
